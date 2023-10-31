@@ -1,0 +1,34 @@
+<div id="contato" class="container">
+    <div class="row">
+        <div class="col-md-6 bg-purple">
+            <div class="img-banner">
+                <img src="../../../assets/banner.png" alt="">
+            </div>
+        </div>
+        <div class="col-md-6">
+       <div class="formulario-contato">
+             <h1>Fale Conosco</h1>
+            <form [formGroup]="formularioContato" (ngSubmit)="enviarFormulario()">
+  <mat-form-field>
+    <input matInput placeholder="Nome" formControlName="nome" required>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Email" formControlName="email" required>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Telefone (WhatsApp)" formControlName="telefone" required>
+  </mat-form-field>
+
+  <mat-form-field>
+    <textarea matInput placeholder="Mensagem" formControlName="mensagem" required></textarea>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" type="submit" [disabled]="!formularioContato.valid">Enviar</button>
+</form>
+       </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+.container{
+    padding-top: 50px;
+    h1{
+        color: #5F0C96;
+    }
+    .bg-purple{
+        background-color: #5F0C96;
+    }
+    .img-banner{
+        display: flex;
+        flex-wrap: wrap;
+            justify-content: center;
+            border-radius: 50px;
+
+       
+    }
+  .formulario-contato{
+    padding-top: 30px;
+    form{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        .mat-form-field{
+            max-width: 400px;
+            width: 100%;
+        }
+    }
+  }
+}

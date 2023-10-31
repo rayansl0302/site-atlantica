@@ -1,0 +1,23 @@
+nav{
+    background-color: #5F0C96;
+    .navbar-brand{
+       color: #fff;
+       margin-left: 15px;
+       margin-top: 15px;
+    }
+    ul{
+        margin-left: auto;
+        margin-right: 10px;
+        .nav-link {
+            color: #fff;
+                    padding: 20px;
+
+        }
+
+        .nav-link:hover {
+            transform: scale(1.5); 
+            transition: transform 0.3s ease-in-out;
+        }
+
+    }
+}

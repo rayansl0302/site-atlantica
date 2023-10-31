@@ -1,0 +1,31 @@
+.clientes {
+    display: flex;
+    margin-top: 50px;
+    border-top: 1px solid #5F0C96;
+    border-bottom: 1px solid #5F0C96;
+    flex-direction: column;
+    width: 100%;
+
+    h2 {  
+        text-align: center;
+        color:#5F0C96;
+    }
+
+    .prefeitura-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 20px 0;
+    gap: 20px;
+    overflow-x: auto;
+    width: 100%;
+
+
+        .prefeitura-item {
+            img {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    }
+}
