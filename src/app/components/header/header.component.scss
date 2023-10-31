@@ -21,3 +21,16 @@ nav{
 
     }
 }
+@media (max-width: 600px) {
+    .navbar{
+        .navbar-toggler{
+            background-color: #fff;
+        }
+        ul{
+        .nav-link:hover {
+            transform: scale(1.0); 
+            transition: none;
+        }
+        }
+    }
+}
