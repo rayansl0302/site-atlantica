@@ -18,6 +18,7 @@ import { SobreEmpresaComponent } from './components/sobre-empresa/sobre-empresa.
 import { ClientesComponent } from './components/clientes/clientes.component';
 import { ContatoComponent } from './components/contato/contato.component';
 import { SistemasComponent } from './components/sistemas/sistemas.component';
+import { BannerComponent } from './components/banner/banner.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { SistemasComponent } from './components/sistemas/sistemas.component';
     ClientesComponent,
     ContatoComponent,
     SistemasComponent,
+    BannerComponent,
   ],
   imports: [
     BrowserModule,

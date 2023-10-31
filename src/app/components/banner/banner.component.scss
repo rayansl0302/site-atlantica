@@ -1,0 +1,18 @@
+.carousel-inner{
+    margin-top: 50px;
+.carousel-item{
+img{
+    height: 650px;
+}
+}
+}
+
+@media (max-width: 600px) {
+.carousel-inner{
+    .carousel-item{
+img{
+    height: auto;
+}
+}
+}
+}
