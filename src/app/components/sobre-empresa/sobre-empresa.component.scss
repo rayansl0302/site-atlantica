@@ -18,3 +18,13 @@
         }
     }
 }
+
+@media (max-width: 600px) {
+ .sobre-section{
+    .img-sobre{
+        img{
+            width: 300px;
+        }
+    }
+}
+}
