@@ -40,3 +40,15 @@
     }
   }
 }
+@media (max-width: 600px) {
+.footer{
+   .footer-logo{
+    justify-content: center;
+ }
+ .footer-contact{
+      display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+ }
+}
+}
