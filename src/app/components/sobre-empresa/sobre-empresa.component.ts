@@ -11,12 +11,12 @@ export class SobreEmpresaComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.inicializarAOS();
+    // this.inicializarAOS();
 
   }
-  private inicializarAOS(): void {
-    Aos.init({
-      duration: 800 
-    });
-  }
+  // private inicializarAOS(): void {
+  //   Aos.init({
+  //     duration: 800 
+  //   });
+  // }
 }
