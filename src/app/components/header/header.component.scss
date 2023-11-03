@@ -29,9 +29,13 @@
 }
 @media (max-width: 600px) {
     .position{
+        display: block;
         .navbar{
             .navbar-toggler{
                 background-color: #5F0C96;
+                span{
+                    filter: invert(1);
+                }
             }
             ul{
             .nav-link:hover {
