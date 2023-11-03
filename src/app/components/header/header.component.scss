@@ -1,36 +1,45 @@
-nav{
-    background-color: #5F0C96;
-    .navbar-brand{
-       color: #fff;
-       margin-left: 15px;
-       margin-top: 15px;
-    }
-    ul{
-        margin-left: auto;
-        margin-right: 10px;
-        .nav-link {
-            color: #fff;
-                    padding: 20px;
-
+.position{
+    position: fixed;
+    width: 100%;
+    z-index: 9;
+    top: 0;
+    nav{
+        background-color: #fff;
+        .navbar-brand{
+           color: #5F0C96;
+           margin-left: 15px;
+           margin-top: 15px;
         }
-
-        .nav-link:hover {
-            transform: scale(1.5); 
-            transition: transform 0.3s ease-in-out;
+        ul{
+            margin-left: auto;
+            margin-right: 10px;
+            .nav-link {
+                color: #5F0C96;
+                padding: 20px;
+    
+            }
+    
+            .nav-link:hover {
+                transform: scale(1.5); 
+                transition: transform 0.3s ease-in-out;
+            }
+    
         }
-
     }
 }
 @media (max-width: 600px) {
-    .navbar{
-        .navbar-toggler{
-            background-color: #fff;
-        }
-        ul{
-        .nav-link:hover {
-            transform: scale(1.0); 
-            transition: none;
-        }
+    .position{
+        .navbar{
+            .navbar-toggler{
+                background-color: #5F0C96;
+            }
+            ul{
+            .nav-link:hover {
+                transform: scale(1.0); 
+                transition: none;
+            }
+            }
         }
     }
+ 
 }

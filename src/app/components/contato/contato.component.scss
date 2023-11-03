@@ -6,12 +6,13 @@
     .img-banner{
         display: flex;
         flex-wrap: wrap;
-            justify-content: center;
+            justify-content: flex-end;
             border-radius: 50px;
         background-color: #5F0C96;
-
        img{
-        width: 40%;
+        display: flex;
+        position: relative;
+        width: 100%;
        }
     }
   .formulario-contato{
