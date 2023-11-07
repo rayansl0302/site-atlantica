@@ -15,8 +15,7 @@
             margin-right: 10px;
             .nav-link {
                 color: #727272;
-                padding: 20px;
-    
+                padding: 10px 35px;    
             }
     
             .nav-link:hover {
@@ -24,7 +23,18 @@
                 transition: transform 0.3s ease-in-out;
                 color: #5F0C96;
             }
-    
+            li{
+                border-right: #727272 1px solid;
+                a{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+            li:last-child{
+                border-right: none;
+            }
         }
     }
 }
