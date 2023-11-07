@@ -4,9 +4,9 @@
     z-index: 9;
     top: 0;
     nav{
-        background-color: #fff;
+        background-color: #161616;
         .navbar-brand{
-           color: #5F0C96;
+           color: #fff;
            margin-left: 15px;
            margin-top: 15px;
         }
@@ -14,7 +14,7 @@
             margin-left: auto;
             margin-right: 10px;
             .nav-link {
-                color: #5F0C96;
+                color: #727272;
                 padding: 20px;
     
             }
@@ -22,6 +22,7 @@
             .nav-link:hover {
                 transform: scale(1.5); 
                 transition: transform 0.3s ease-in-out;
+                color: #5F0C96;
             }
     
         }
