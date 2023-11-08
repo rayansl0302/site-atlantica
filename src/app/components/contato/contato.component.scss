@@ -1,14 +1,14 @@
 .container{
     padding-top: 50px;
+    padding-bottom: 50px;
     h1{
-        color: #5F0C96;
     }
     .img-banner{
         display: flex;
         flex-wrap: wrap;
             justify-content: flex-end;
             border-radius: 50px;
-        background-color: #5F0C96;
+        background-color: #161616;
        img{
         display: flex;
         position: relative;
@@ -28,4 +28,7 @@
         }
     }
   }
+}
+.bkg{
+    background-color: #f8f6f6;
 }
