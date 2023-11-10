@@ -2,13 +2,18 @@ html {
   scroll-behavior: smooth;
 }
 .bkg{
-  background-image: url('../assets/slider/slider-1-2.jpg');
+  background-image: url('../assets/sobre-empresa.jpg');
     background-repeat: no-repeat;
     background-size: 100% 1100px;
 }
+@media (min-width: 1400px) {
+  .bkg{
+      background-size: 100% 1152px;
+  }
+}
 @media (max-width: 1365px) {
   .bkg{
-      background-size: 100% 1150px;
+      background-size: 100% 1152px;
   }
 }
 @media (max-width: 600px) {
