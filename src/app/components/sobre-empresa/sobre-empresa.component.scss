@@ -1,55 +1,81 @@
-.bkg-sobre{
-    background-color: #00000083;
+.bkg-sobre {
+    // background-color: #00000083;
+    background-image: url('../../../assets/sobre2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
     height: 100%;
     max-height: 500px;
-    .sobre-section{
+
+    .sobre-section {
         padding-top: 30px;
         padding-bottom: 30px;
-        .sobre-content{
-            padding-top: 100px;
-            color: #fff;
-            h1{
-                text-align: right;
-            }
-            h2{
-                text-align: center;            
-            }
-        }
-        .img-sobre{
-            border-radius: 50px;
-                display: flex;
-        align-items: center;
-        justify-content: center;
-    
-            img{
-                max-width: 500px;
-            }
-        }
-        .vertical-line{
-            border-left: 1px solid #e5e5e5;
-    margin-bottom: -100px;
-    margin-top: 85px;
-        }
-    }
-    
-}
-@media (max-width: 600px) {
- .bkg-sobre{
-    background-color: #161616;
-    .sobre-section{
-        .sobre-content{
+        background-color: #00000083;
+
+        .sobre-content {
             padding-top: 30px;
             padding-bottom: 30px;
-            h1{
+            color: #fff;
+            width: 70%;
+            h1 {
+                text-align: right;
+            }
+
+            h2 {
                 text-align: center;
             }
         }
-        .img-sobre{
-            img{
-                width: 300px;
+        .sobre-title{
+            width: 100%;
+            color: #fff;
+            padding-top: 30px;
+            h1 {
+                text-align: right;
+            }
+        }
+        .img-sobre {
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                max-width: 500px;
+            }
+        }
+
+        .vertical-line {
+            border-left: 1px solid #e5e5e5;
+            margin-bottom: -150px;
+            margin-top: 85px;
+        }
+    }
+
+    .container {
+        max-width: 100%;
+        margin: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .bkg-sobre {
+        background-color: #161616;
+
+        .sobre-section {
+            .sobre-content {
+                padding-top: 30px;
+                padding-bottom: 30px;
+
+                h1 {
+                    text-align: center;
+                }
+            }
+
+            .img-sobre {
+                img {
+                    width: 300px;
+                }
             }
         }
     }
- }
 }

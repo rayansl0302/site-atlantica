@@ -1,24 +1,24 @@
 html {
   scroll-behavior: smooth;
 }
-.bkg{
-  background-image: url('../assets/sobre-empresa.jpg');
-    background-repeat: no-repeat;
-    background-size: 100% 1100px;
-}
-@media (min-width: 1400px) {
-  .bkg{
-      background-size: 100% 1652px;
-  }
-}
-@media (max-width: 1365px) {
-  .bkg{
-      background-size: 100% 1652px;
-  }
-}
-@media (max-width: 600px) {
-  .bkg{
-      background-size: 100% 600px;
-  }
-}
+// .bkg{
+//   background-image: url('../assets/sobre1.png');
+//     background-repeat: no-repeat;
+//     background-size: contain;
+//   }
+// @media (min-width: 1400px) {
+//   .bkg{
+//       background-size: 100% 1652px;
+//   }
+// }
+// @media (max-width: 1365px) {
+//   .bkg{
+//       background-size: 100% 1652px;
+//   }
+// }
+// @media (max-width: 600px) {
+//   .bkg{
+//       background-size:contain;
+//   }
+// }
 
