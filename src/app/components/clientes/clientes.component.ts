@@ -32,13 +32,16 @@ export class ClientesComponent implements OnInit, OnDestroy {
     { url: 'assets/clientes/veterinaria.png' },
   ];
 
-  activeIndex: number = 0;
+  clientesPorGrupo: { url: string }[][] = [];
+  ativoGrupoIndex: number = 0;
   private intervalSubscription!: Subscription;
 
   constructor() { }
 
   ngOnInit(): void {
-    this.intervalSubscription = interval(5000).subscribe(() => {
+    this.clientesPorGrupo = this.chunkArray(this.clientes, 3);
+
+    this.intervalSubscription = interval(8000).subscribe(() => {
       this.nextSlide();
     });
   }
@@ -50,10 +53,21 @@ export class ClientesComponent implements OnInit, OnDestroy {
   }
 
   nextSlide() {
-    this.activeIndex = (this.activeIndex + 1) % this.clientes.length;
+    this.ativoGrupoIndex = (this.ativoGrupoIndex + 1) % this.clientesPorGrupo.length;
   }
 
   prevSlide() {
-    this.activeIndex = (this.activeIndex - 1 + this.clientes.length) % this.clientes.length;
+    this.ativoGrupoIndex = (this.ativoGrupoIndex - 1 + this.clientesPorGrupo.length) % this.clientesPorGrupo.length;
+    if (this.ativoGrupoIndex < 0) {
+      this.ativoGrupoIndex = this.clientesPorGrupo.length - 1;
+    }
+  }
+
+  private chunkArray(array: any[], size: number): any[] {
+    const chunkedArray = [];
+    for (let i = 0; i < array.length; i += size) {
+      chunkedArray.push(array.slice(i, i + size));
+    }
+    return chunkedArray;
   }
 }

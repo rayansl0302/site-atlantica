@@ -1,20 +1,24 @@
 <div id="clientes" class="clientes" data-aos="fade-down">
     <h2>Alguns dos nossos clientes</h2>
-    <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+  
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
-        <div *ngFor="let cliente of clientes; let i = index" [class.active]="i === activeIndex" class="carousel-item" data-interval="5000">
-          <img [src]="cliente.url" class="d-block" alt="Imagem do Cliente">
+        <div *ngFor="let chunk of clientesPorGrupo; let i = index" class="carousel-item" [class.active]="i === ativoGrupoIndex">
+          <div class="d-flex">
+            <ng-container *ngFor="let cliente of chunk">
+              <img [src]="cliente.url" class="d-block w-100" alt="Imagem do Cliente">
+            </ng-container>
+          </div>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-target="#carouselExampleInterval" data-slide="prev" (click)="prevSlide()">
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev" (click)="prevSlide()">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
       </button>
-      <button class="carousel-control-next" type="button" data-target="#carouselExampleInterval" data-slide="next" (click)="nextSlide()">
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next" (click)="nextSlide()">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-  
   </div>
   
