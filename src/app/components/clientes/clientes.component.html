@@ -1,27 +1,11 @@
 
-    <div id="clientes" class="clientes" data-aos="fade-down">
-        <h2>Parceiros da Atlântica</h2>
-        <div class="container">
-    <div class="prefeitura-content">
-        <div class="prefeitura-item">
-            <img src="../../../assets/clientes/pref-araças.png" alt="">
-        </div>
-        <div class="prefeitura-item">
-         <img src="../../../assets/clientes/pref-conceicao.png" alt="">
-
-        </div>
-        <div class="prefeitura-item">
-             <img src="../../../assets/clientes/pref-conde.png" alt="">
-        </div>
-        <div class="prefeitura-item">
-             <img src="../../../assets/clientes/pref-govMang.png" alt="">
-        </div>
-        <div class="prefeitura-item">
-             <img src="../../../assets/clientes/pref-ipira.png" alt="">
-        </div>
-        <div class="prefeitura-item">
-             <img src="../../../assets/clientes/pref-matasj.png" alt="">
+<div id="clientes" class="clientes" data-aos="fade-down">
+    <h2>Alguns dos nossos clientes</h2>
+    <div class="container">
+        <div class="prefeitura-content">
+            <div *ngFor="let cliente of clientes" class="prefeitura-item">
+                <img [src]="cliente.url" alt>
+            </div>
         </div>
     </div>
-</div>
 </div>
