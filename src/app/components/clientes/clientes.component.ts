@@ -46,8 +46,8 @@ export class ClientesComponent implements OnInit, OnDestroy {
       this.nextSlide();
     });
 
-    this.checkWindowSize();
-    window.addEventListener('resize', () => this.checkWindowSize());
+    // this.checkWindowSize();
+    // window.addEventListener('resize', () => this.checkWindowSize());
   }
 
   ngOnDestroy(): void {
