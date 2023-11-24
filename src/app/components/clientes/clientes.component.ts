@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ElementRef, Renderer2 } from '@angular/core';
 import { interval, Subscription } from 'rxjs';
 
 @Component({
@@ -31,12 +31,13 @@ export class ClientesComponent implements OnInit, OnDestroy {
     { url: 'assets/clientes/ufba.png' },
     { url: 'assets/clientes/veterinaria.png' },
   ];
-
   clientesPorGrupo: { url: string }[][] = [];
   ativoGrupoIndex: number = 0;
+  ativoIndex: number = 0;
   private intervalSubscription!: Subscription;
+  isDesktop: boolean = true;
 
-  constructor() { }
+  constructor(private elementRef: ElementRef, private renderer: Renderer2) { }
 
   ngOnInit(): void {
     this.clientesPorGrupo = this.chunkArray(this.clientes, 3);
@@ -44,6 +45,9 @@ export class ClientesComponent implements OnInit, OnDestroy {
     this.intervalSubscription = interval(8000).subscribe(() => {
       this.nextSlide();
     });
+
+    this.checkWindowSize();
+    window.addEventListener('resize', () => this.checkWindowSize());
   }
 
   ngOnDestroy(): void {
@@ -52,14 +56,29 @@ export class ClientesComponent implements OnInit, OnDestroy {
     }
   }
 
+  checkWindowSize() {
+    this.isDesktop = window.innerWidth >= 768; // Adjust the breakpoint as needed
+  }
+
   nextSlide() {
-    this.ativoGrupoIndex = (this.ativoGrupoIndex + 1) % this.clientesPorGrupo.length;
+    if (this.isDesktop) {
+      this.ativoGrupoIndex = (this.ativoGrupoIndex + 1) % this.clientesPorGrupo.length;
+    } else {
+      this.ativoIndex = (this.ativoIndex + 1) % this.clientes.length;
+    }
   }
 
   prevSlide() {
-    this.ativoGrupoIndex = (this.ativoGrupoIndex - 1 + this.clientesPorGrupo.length) % this.clientesPorGrupo.length;
-    if (this.ativoGrupoIndex < 0) {
-      this.ativoGrupoIndex = this.clientesPorGrupo.length - 1;
+    if (this.isDesktop) {
+      this.ativoGrupoIndex = (this.ativoGrupoIndex - 1 + this.clientesPorGrupo.length) % this.clientesPorGrupo.length;
+      if (this.ativoGrupoIndex < 0) {
+        this.ativoGrupoIndex = this.clientesPorGrupo.length - 1;
+      }
+    } else {
+      this.ativoIndex = (this.ativoIndex - 1 + this.clientes.length) % this.clientes.length;
+      if (this.ativoIndex < 0) {
+        this.ativoIndex = this.clientes.length - 1;
+      }
     }
   }
 

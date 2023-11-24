@@ -17,13 +17,19 @@
 
     .carousel {
         width: 60%;
+    }
 
+    @media (max-width: 768px) {
+        .carousel {
+            width: 100%;
+        }
     }
 
     .carousel-inner {
         position: relative;
         overflow: hidden;
         height: 250px;
+        margin-left: -60px;
 
         .carousel-item {
             flex: 0 0 100%;
@@ -36,23 +42,30 @@
                 margin-left: auto;
                 margin-inline-start: auto;
                 max-width: 250px;
-                max-height: 150px;
+                max-height: 200px;
                 object-fit: contain;
+                background-color: #fff;
+
             }
         }
 
         .carousel-item.active {
             opacity: 1;
             z-index: 1;
+            background-color: #fff;
         }
     }
 
     button {
         background-color: #161616;
-        margin: -100px;
+        margin: -50px 0; // Ajuste a margem superior para um visual mais agradável
         width: 50px;
         height: 50px;
         border-radius: 50px;
-        margin-top: 10%;
+        margin-top: 5%; // Ajuste a margem superior para um visual mais agradável
+
+        @media (min-width: 768px) {
+            margin-top: 10%; // Ajuste a margem superior em telas médias e grandes
+        }
     }
 }
