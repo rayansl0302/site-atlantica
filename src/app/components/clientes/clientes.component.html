@@ -1,11 +1,20 @@
-
 <div id="clientes" class="clientes" data-aos="fade-down">
     <h2>Alguns dos nossos clientes</h2>
-    <div class="container">
-        <div class="prefeitura-content">
-            <div *ngFor="let cliente of clientes" class="prefeitura-item">
-                <img [src]="cliente.url" alt>
-            </div>
+    <div id="carouselExampleInterval" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div *ngFor="let cliente of clientes; let i = index" [class.active]="i === activeIndex" class="carousel-item" data-interval="5000">
+          <img [src]="cliente.url" class="d-block" alt="Imagem do Cliente">
         </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-target="#carouselExampleInterval" data-slide="prev" (click)="prevSlide()">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-target="#carouselExampleInterval" data-slide="next" (click)="nextSlide()">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-</div>
+  
+  </div>
+  

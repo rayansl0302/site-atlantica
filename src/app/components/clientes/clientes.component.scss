@@ -1,38 +1,39 @@
 .clientes {
     display: flex;
-    padding-top: 35px;
-    padding-bottom: 35px;
+    flex-wrap: wrap;
+    padding-top: 45px;
+    padding-bottom: 45px;
     flex-direction: column;
     width: 100%;
     background-color: #fff;
-
+    align-content: space-around;
+    min-height:400px ;
     h2 {
         text-align: center;
         color: #161616;
     }
 
-    .container {
-        overflow-x: auto;
-        max-width: 1550px;
-        padding: 0 50px;
-        
-    }
-
-    .prefeitura-content {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        padding: 20px 0;
-        gap: 20px;
-        overflow-x: auto;
-        width: max-content;
-
-
-        .prefeitura-item {
+    .carousel-inner {
+        .carousel-item {
             img {
-                max-width: 250px;
-                height: 150px;
+                padding: 20px;
+                max-width: 450px;
+                max-height: 200px;
+                margin-left: auto;
+                margin-right: auto;
+                transition: transform 0.9s ease;
+                transform: scale(1.1);
+               
             }
         }
+    }
+
+    button {
+        background-color: #161616;
+        margin: -100px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50px;
+        margin-top: 20%;
     }
 }
